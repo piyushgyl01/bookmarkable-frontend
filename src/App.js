@@ -92,7 +92,7 @@ export default function App() {
     <div className="app">
       <h1>Add Bookmark</h1>
       <button onClick={() => setAddBookmark(!addBookmark)}>
-        {!addBookmark ? "+" : "collapse"}
+        {!addBookmark ? "Open" : "Collapse"}
       </button>{" "}
       <br />
       {addBookmark && (
