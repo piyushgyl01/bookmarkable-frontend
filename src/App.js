@@ -137,12 +137,16 @@ export default function App() {
       <ul>
         {bookmarks.map((bookmark) => (
           <>
-            <div></div>
-            <li>{bookmark.category}</li>
-            <a href={bookmark.url} target="_blank">
-              {bookmark.name}
-            </a>{" "}
-            <br />
+            <li>
+              {" "}
+              <h2>
+                {" "}
+                <a href={bookmark.url} target="_blank">
+                  {bookmark.name}
+                </a>{" "}
+                ({bookmark.category})
+              </h2>
+            </li>
             <button
               onClick={() =>
                 setEditBookmarkId(
@@ -152,7 +156,6 @@ export default function App() {
             >
               Edit
             </button>{" "}
-            <br />
             <button onClick={() => handleDelete(bookmark._id)}>Delete</button>
             <br />
             {editBookmarkId === bookmark._id && (
